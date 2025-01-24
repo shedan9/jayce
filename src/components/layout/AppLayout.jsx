@@ -17,7 +17,7 @@ export default function AppLayout() {
           Layout: {
             headerBg: colorPrimaryBg,
           },
-        }
+        },
       }}
     >
       <Layout>

@@ -1,4 +1,13 @@
-import { Layout, Menu, Flex, Avatar, Dropdown, Button, ConfigProvider, theme } from 'antd';
+import {
+  Layout,
+  Menu,
+  Flex,
+  Avatar,
+  Dropdown,
+  Button,
+  ConfigProvider,
+  theme,
+} from 'antd';
 import { UserOutlined, SunOutlined, MoonOutlined } from '@ant-design/icons';
 import { createStyles } from 'antd-style';
 import logo from '@/assets/img/logo.svg';
@@ -14,14 +23,14 @@ const useStyle = createStyles(({ token }, { theme }) => ({
   },
   title: {
     fontSize: 32,
-    color: theme === 'dark' ? token.colorText : token.colorPrimary
-  }
+    color: theme === 'dark' ? token.colorText : token.colorPrimary,
+  },
 }));
 
 const items1 = [
   { key: '/', label: 'Home' },
   { key: '/about', label: 'About' },
-  { key: '/setting', label: 'Setting' }
+  { key: '/setting', label: 'Setting' },
 ].map((item) => ({
   key: item.key,
   label: item.label,
@@ -31,7 +40,7 @@ const items = [
   {
     key: '1',
     label: 'logout',
-  }
+  },
 ];
 
 export default function LayoutHeader() {
@@ -60,18 +69,24 @@ export default function LayoutHeader() {
           Menu: {
             itemBg: token.colorPrimaryBg,
             horizontalItemHoverBg: token.colorPrimaryBgHover,
-          }
+          },
         },
       }}
     >
-      <Header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <Header
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
         <Flex align="center">
-          <Flex gap={8} align="center" style={{ marginRight: 64, cursor: 'pointer' }}>
-            <img
-              className={styles.logo}
-              alt="logo"
-              src={logo}
-            />
+          <Flex
+            gap={8}
+            align="center"
+            style={{ marginRight: 64, cursor: 'pointer' }}
+          >
+            <img className={styles.logo} alt="logo" src={logo} />
             <h1 className={styles.title}>Jayce</h1>
           </Flex>
           <Menu
@@ -84,7 +99,11 @@ export default function LayoutHeader() {
         </Flex>
 
         <Flex align="center">
-          <Button type="text" style={{ marginRight: 24, height: 48 }} onClick={handleThemeChange}>
+          <Button
+            type="text"
+            style={{ marginRight: 24, height: 48 }}
+            onClick={handleThemeChange}
+          >
             {isLight ? (
               <SunOutlined style={{ fontSize: 24 }} />
             ) : (
