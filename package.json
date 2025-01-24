@@ -47,7 +47,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint",
-    "*.{css}": "stylelint --fix",
+    "*.css": "stylelint --fix",
     "**/*": "prettier --write --ignore-unknown"
   },
   "commitlint": {
