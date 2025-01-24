@@ -36,16 +36,6 @@ export default defineConfig(({ mode }) => {
       proxy: createProxyConfig(devServer.proxy, mode),
     },
     resolve: {
-      // extensions: [
-      //   '.mjs',
-      //   '.js',
-      //   '.mts',
-      //   '.ts',
-      //   '.jsx',
-      //   '.tsx',
-      //   '.json',
-      //   '.vue',
-      // ],
       alias: [
         {
           find: '@',
