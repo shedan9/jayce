@@ -13,24 +13,32 @@ export default function SettingIndex() {
     <div>
       <Space>
         <Button onClick={() => handleMessageShow('info')}>Message</Button>
-        <Button variant="solid" color="green" onClick={() => handleMessageShow('success')}>Message</Button>
-        <Button variant="solid" color="yellow" onClick={() => handleMessageShow('warning')}>Message</Button>
-        <Button variant="solid" color="danger" onClick={() => handleMessageShow('error')}>Message</Button>
+        <Button
+          variant="solid"
+          color="green"
+          onClick={() => handleMessageShow('success')}
+        >
+          Message
+        </Button>
+        <Button
+          variant="solid"
+          color="yellow"
+          onClick={() => handleMessageShow('warning')}
+        >
+          Message
+        </Button>
+        <Button
+          variant="solid"
+          color="danger"
+          onClick={() => handleMessageShow('error')}
+        >
+          Message
+        </Button>
       </Space>
 
       <div style={{ marginTop: 24 }}>
-        <img
-          className="img-home"
-          src={homeSvg}
-          alt="home"
-          title="img-svg"
-        />
-        <img
-          className="img-home"
-          src={homePng}
-          alt="home"
-          title="img-png"
-        />
+        <img className="img-home" src={homeSvg} alt="home" title="img-svg" />
+        <img className="img-home" src={homePng} alt="home" title="img-png" />
         <i className="icon-home svg" title="icon-svg"></i>
         <i className="icon-home png" title="icon-png"></i>
       </div>
