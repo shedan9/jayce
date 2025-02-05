@@ -226,7 +226,7 @@ export default function FormCard() {
           label="Upload"
           valuePropName="fileList"
           getValueFromEvent={normFile}
-          extra="longgggggggggggggggggggggggggggggggggg"
+          extra="extra text"
         >
           <Upload name="logo" action="/upload.do" listType="picture">
             <Button icon={<UploadOutlined />}>Click to upload</Button>
