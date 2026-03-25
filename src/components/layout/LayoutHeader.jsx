@@ -7,6 +7,7 @@ import {
   Button,
   ConfigProvider,
   theme,
+  ColorPicker,
 } from 'antd';
 import { UserOutlined, SunOutlined, MoonOutlined } from '@ant-design/icons';
 import { createStyles } from 'antd-style';
@@ -49,6 +50,8 @@ export default function LayoutHeader() {
   const location = useLocation();
   const themeState = useAppStore((state) => state.theme);
   const changeTheme = useAppStore((state) => state.changeTheme);
+  const primaryColor = useAppStore((state) => state.primaryColor);
+  const setPrimaryColor = useAppStore((state) => state.setPrimaryColor);
   const { styles } = useStyle({ theme: themeState });
 
   const isLight = themeState !== 'dark';
@@ -81,11 +84,7 @@ export default function LayoutHeader() {
         }}
       >
         <Flex align="center">
-          <Flex
-            gap={8}
-            align="center"
-            style={{ marginRight: 64, cursor: 'pointer' }}
-          >
+          <Flex gap={8} align="center" className="mr-[64px] cursor-pointer">
             <img className={styles.logo} alt="logo" src={logo} />
             <h1 className={styles.title}>Jayce</h1>
           </Flex>
@@ -99,15 +98,19 @@ export default function LayoutHeader() {
         </Flex>
 
         <Flex align="center">
+          <ColorPicker
+            value={primaryColor}
+            onChange={(color) => setPrimaryColor(color.toHexString())}
+          />
           <Button
             type="text"
-            style={{ marginRight: 24, height: 48 }}
+            className="mx-[24px] h-[48px]"
             onClick={handleThemeChange}
           >
             {isLight ? (
-              <SunOutlined style={{ fontSize: 24 }} />
+              <SunOutlined className="text-[24px]" />
             ) : (
-              <MoonOutlined style={{ fontSize: 24 }} />
+              <MoonOutlined className="text-[24px]" />
             )}
           </Button>
 

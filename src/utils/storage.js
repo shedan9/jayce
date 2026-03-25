@@ -11,6 +11,17 @@ export default {
         window.localStorage.removeItem('theme');
       },
     },
+    primaryColor: {
+      get() {
+        return window.localStorage.getItem('primaryColor');
+      },
+      set(val) {
+        window.localStorage.setItem('primaryColor', val);
+      },
+      clear() {
+        window.localStorage.removeItem('primaryColor');
+      },
+    },
   },
   session: {},
 };

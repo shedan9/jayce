@@ -4,6 +4,7 @@ import { defineConfig, loadEnv } from 'vite';
 import zipPack from 'vite-plugin-zip-pack';
 import react from '@vitejs/plugin-react';
 import devServer from './config/devServer';
+import tailwindcss from '@tailwindcss/vite';
 
 function createProxyConfig(origin, mode) {
   const proxyConfig = {};
@@ -48,6 +49,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       react(),
+      tailwindcss(),
       zipPack({
         inDir: 'dist',
         outDir: 'build',
