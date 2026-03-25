@@ -8,7 +8,7 @@ A React project template that includes Lint(Eslint, Stylelint, CommitLint, lint-
 Start project
 
 ```shell
-npm install
+pnpm install
 
 npm run dev
 ```
